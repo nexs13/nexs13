@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QWidget, QApplication, QPushButton
 import sys
 from random import randint
 
-
+# new
 class Suprematism(QWidget):
     def __init__(self):
         super().__init__()
