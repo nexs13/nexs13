@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import QWidget, QApplication, QPushButton
 import sys
 from random import randint
 
+
 class Suprematism(QWidget):
     def __init__(self):
         super().__init__()
@@ -33,7 +34,7 @@ class Suprematism(QWidget):
 
     def draw(self):
         R = randint(20, 100)
-        self.qp.setBrush(QColor('Yellow'))
+        self.qp.setBrush((QColor(*[randint(0, 255) for _ in range(3)])))
         self.coords_ = [randint(0, 1000), randint(0, 1000)]
         self.qp.drawEllipse(int(self.coords_[0] - R / 2),
                             int(self.coords_[1] - R / 2), R, R)
@@ -47,4 +48,3 @@ if __name__ == '__main__':
     ex = Suprematism()
     ex.show()
     sys.exit(app.exec())
-
